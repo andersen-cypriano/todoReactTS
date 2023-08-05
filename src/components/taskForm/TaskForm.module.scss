@@ -1,0 +1,32 @@
+.form {
+  width: 90vw;
+  > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #DDD;
+    padding: .5em;
+    &:last-of-type{
+      margin-bottom: 1em;
+    }
+    label {
+      display:block;
+      min-width: 30%;
+      padding: .5em 0;
+    }
+    input {
+      width: 70%;
+      border: 0!important;
+      padding: .2em;
+      outline: none;
+    }
+  }
+  input[type="submit"] {
+    width: 100%;
+    border: 0;
+    background-color: #000;
+    color: #FFF;
+    padding: .5em;
+    font-size: 1.2em;
+  }
+}

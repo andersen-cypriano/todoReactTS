@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.2em;
+}
+
+:root {
+  $center-width: 1200px;
+  $grey: red;
+}
+
+.hide {
+  display: none!important;
+}
+
+.container {
+  position: relative;
+  max-width: var(--center-width);
+  margin: 0 auto;
+}
