@@ -1,5 +1,6 @@
 .form {
-  width: 90vw;
+  width: 40vw;
+  margin-bottom: 2em;
   > div {
     display: flex;
     align-items: center;
@@ -28,5 +29,10 @@
     color: #FFF;
     padding: .5em;
     font-size: 1.2em;
+  }
+}
+@media(max-width: 768px) {
+  .form {
+    width: 90vw;
   }
 }

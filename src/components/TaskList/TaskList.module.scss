@@ -1,0 +1,42 @@
+.taskListContent {
+  width: 40vw;
+  @media(max-width: 768px) {
+    width: 90vw;
+  }
+  > h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  ul {
+    width: 100%;
+    list-style: none;
+    background-color: #eee;
+    padding: .5em;
+    li {
+      margin-bottom: 1rem;
+      &:last-of-type {
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+      .contentInfo {
+        width: 85%;
+        padding: 0;
+        h1 {
+          margin: 0;
+          font-size: 1.3rem;
+          font-weight: 600;
+          &::before {
+            content: '- ';
+          }
+        }
+        p {
+          margin: 0!important;
+        }
+      }
+    }
+  }
+  .noItem {
+    text-align: center;
+  }
+}
