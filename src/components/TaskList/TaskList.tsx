@@ -1,8 +1,24 @@
-const TaskList = () => {
+import { ITask } from "../../interfaces/ITask";
+
+interface Props {
+  taskList: ITask[]
+}
+
+const TaskList = ({taskList}: Props) => {
   return (
     <div className="taskList-content">
-      <h3>Lista de tarefas</h3>
-      <ul></ul>
+      <ul>
+        {taskList.length > 0 ? (
+          taskList.map(task => (
+            <li key={task.id}>
+              <h1 className="title">{task.title}</h1>
+              <p className="">{task.description}</p>
+            </li>
+          ))
+        ) : (
+          <p>Sem tarefas</p>
+        )}
+      </ul>
     </div>
   )
 }

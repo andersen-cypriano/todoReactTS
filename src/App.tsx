@@ -11,11 +11,11 @@ function App() {
   const [taskList, setTaskList] = useState<ITask[]>([]);
 
   return (
-    <>
+    <>  
       <Header/>
       <div className={styles.main}>
         <TaskForm btnText="Criar Tarefa" taskList={taskList} setTaskList={setTaskList}/>
-        <TaskList/>
+        <TaskList taskList={taskList}/>
       </div>
       <Footer/>
     </>
