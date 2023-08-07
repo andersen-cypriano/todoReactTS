@@ -28,6 +28,7 @@ const TaskForm = ({ btnText, taskList, setTaskList }: Props) => {
     e.target.name === "title"
       ? setTitle(e.target.value)
       : setDescription(e.target.value);
+      : setDescription(e.target.value);
   };
 
   return (
