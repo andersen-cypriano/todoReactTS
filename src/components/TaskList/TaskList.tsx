@@ -1,10 +1,12 @@
 import { ITask } from "../../interfaces/ITask";
 import  styles  from "./TaskList.module.css";
+
 interface Props {
-  taskList: ITask[]
+  taskList: ITask[];
+  handleDelete(id: number): void;
 }
 
-const TaskList = ({taskList}: Props) => {
+const TaskList = ({taskList, handleDelete}: Props) => {
   return (
     <div className={styles.taskListContent}>
       <h1>Lista de Tarefas</h1>
@@ -15,6 +17,10 @@ const TaskList = ({taskList}: Props) => {
                 <div className={styles.contentInfo}>
                   <h1 className="title">{task.title}</h1>
                   <p className="">{task.description}</p>
+                </div>
+                <div className={styles.contentIcon}>
+                  <i className="bi bi-pencil"></i>
+                  <i className="bi bi-trash" onClick={()=>{handleDelete(task.id)}}></i>
                 </div>
               </li>
             </ul>

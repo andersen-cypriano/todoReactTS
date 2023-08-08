@@ -9,13 +9,19 @@ import {ITask} from "./interfaces/ITask";
 
 function App() {
   const [taskList, setTaskList] = useState<ITask[]>([]);
-
+  const deleteTask = (id: number) => {
+    setTaskList (
+      taskList.filter(task => {
+        return task.id !== id
+      })
+    );
+  };
   return (
     <>  
       <Header/>
       <div className={styles.main}>
         <TaskForm btnText="Criar Tarefa" taskList={taskList} setTaskList={setTaskList}/>
-        <TaskList taskList={taskList}/>
+        <TaskList taskList={taskList} handleDelete={deleteTask}/>
       </div>
       <Footer/>
     </>

@@ -15,6 +15,9 @@
     padding: .5em;
     li {
       margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       &:last-of-type {
         border-bottom: 0;
         margin-bottom: 0;
@@ -30,8 +33,19 @@
             content: '- ';
           }
         }
+        
         p {
           margin: 0!important;
+        }
+      }
+      .contentIcon {
+        width: 15%;
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+        i {
+          display: block;
+          cursor: pointer;
         }
       }
     }
